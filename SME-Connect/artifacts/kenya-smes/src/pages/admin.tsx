@@ -1,0 +1,16 @@
+import { useState } from "react";
+import { Settings2, Database, ShieldCheck, Save } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { useToast } from "@/hooks/use-toast";
+
+const initialFees = [["ORDINARY MEMBER", 150], ["GRASSROOTS COORDINATOR", 250], ["RETAIL DEVELOPMENT MEMBER", 5000], ["BUSINESS DEVELOPMENT MEMBER", 10000]];
+
+export default function Admin() {
+  const [fees, setFees] = useState(initialFees);
+  const { toast } = useToast();
+  const save = () => toast({ title: "Fee settings saved", description: "These values are ready to connect to the authorised administrator database workflow." });
+  return <div className="min-h-screen bg-muted/30 py-12"><div className="container mx-auto px-4 md:px-6 max-w-5xl"><div className="flex flex-col md:flex-row md:items-end justify-between gap-5 mb-8"><div><Badge className="bg-secondary text-white border-0 mb-3">ADMIN SETTINGS</Badge><h1 className="text-4xl font-black">BNAK operations console</h1><p className="text-muted-foreground mt-2">Manage membership fees and review the KYC-ready operating model.</p></div><Button onClick={save}><Save className="mr-2 h-4 w-4" /> Save changes</Button></div><div className="grid md:grid-cols-3 gap-4 mb-8"><Card><CardContent className="p-5 flex gap-3 items-start"><Settings2 className="text-primary mt-1" /><div><p className="font-bold">Configurable fees</p><p className="text-xs text-muted-foreground mt-1">Change pricing without editing website copy.</p></div></CardContent></Card><Card><CardContent className="p-5 flex gap-3 items-start"><ShieldCheck className="text-secondary mt-1" /><div><p className="font-bold">KYC review</p><p className="text-xs text-muted-foreground mt-1">Personal and business details are captured for review.</p></div></CardContent></Card><Card><CardContent className="p-5 flex gap-3 items-start"><Database className="text-accent-foreground mt-1" /><div><p className="font-bold">Database ready</p><p className="text-xs text-muted-foreground mt-1">Use the database pane to inspect records.</p></div></CardContent></Card></div><Card><CardHeader><CardTitle>Membership system fees</CardTitle></CardHeader><CardContent className="space-y-4">{fees.map(([name, amount], index) => <div key={name} className="grid sm:grid-cols-[1fr_180px] gap-3 items-center border-b last:border-0 pb-4 last:pb-0"><div><p className="font-bold">{name}</p><p className="text-xs text-muted-foreground">Displayed across registration and member communications.</p></div><div className="relative"><span className="absolute left-3 top-2.5 text-sm text-muted-foreground">KSh</span><Input type="number" value={amount} onChange={(e) => setFees((current) => current.map((fee, feeIndex) => feeIndex === index ? [fee[0], Number(e.target.value)] : fee))} className="pl-12" /></div></div>)}</CardContent></Card><div className="mt-5 rounded-xl border border-amber-300 bg-amber-50 p-4 text-sm text-amber-900">For production, keep this surface behind authorised administrator authentication. Coordinator payment never appoints a coordinator automatically; appointment remains an admin decision.</div></div></div>;
+}

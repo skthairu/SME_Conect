@@ -1,0 +1,177 @@
+⚡ E-MOBILITY
+
+POWERING THE NEXT GENERATION OF KENYAN TRANSPORT
+
+A dedicated BNAK section connecting entrepreneurs with electric buses, electric matatus, e-tuk-tuks, electric motorcycles (e-bodas), charging solutions and e-mobility financing.
+
+Main categories
+
+🚌 E-BUS / E-MATATU
+
+* Apply for an electric bus
+* Fleet financing
+* Lease-to-own options
+* Route/operator opportunities
+* Charging information
+* Vehicle suppliers
+* Maintenance and training
+
+🛺 E-TUKTUK
+
+* Apply for an electric tuk-tuk
+* Financing options
+* Lease-to-own
+* Delivery/business use
+* Charging locations
+* Supplier information
+
+🏍️ E-BODA
+
+* Apply for an electric motorcycle
+* Financing
+* Pay-as-you-go / lease-to-own options where offered
+* Battery information
+* Charging/swapping locations
+* Rider training
+* Maintenance
+* Insurance information
+
+🚚 ELECTRIC COMMERCIAL VEHICLES
+
+* Delivery vehicles
+* Pickups/vans
+* Small commercial fleets
+* Cold-chain/logistics vehicles
+
+⸻
+
+💰 E-MOBILITY FINANCE FINDER
+
+This could be one of the strongest features.
+
+A user selects:
+
+What do you want?
+
+🚌 Bus
+🛺 Tuk-tuk
+🏍️ Boda
+🚚 Commercial vehicle
+
+Then:
+
+How do you want to acquire it?
+
+* Financing
+* Lease-to-own
+* Asset finance
+* Cash purchase
+* Fleet financing
+* Partner programme
+
+The system then displays available verified financing/provider programmes, eligibility, deposit, repayment structure, requirements and application process.
+
+BNAK should clearly act as a connector/information platform, unless it has the necessary licence to provide financing itself.
+
+⸻
+
+📋 “APPLY NOW”
+
+Every participating provider can have its own application pathway.
+
+For example:
+
+APPLY FOR E-BODA
+
+1. Select vehicle
+2. Select county
+3. Enter business/transport experience
+4. Select financing preference
+5. Complete eligibility questions
+6. Submit application
+7. Receive application/reference number
+8. Track status
+
+Where possible, the platform should send the application to the actual financing/provider institution, rather than making BNAK unnecessarily responsible for approving finance.
+
+⸻
+
+🗺️ CHARGING & BATTERY NETWORK
+
+Add:
+
+FIND CHARGING NEAR ME
+
+Eventually show:
+
+* Charging stations
+* Battery-swapping stations
+* Opening hours
+* Available services
+* Pricing where officially provided
+* Location
+* Supported vehicle types
+
+This could eventually become a national E-Mobility Map.
+
+⸻
+
+👨🏾‍🔧 E-MOBILITY JOBS & SKILLS
+
+Don’t make the tab only about vehicle ownership.
+
+Include:
+
+* EV technician training
+* Battery technicians
+* Charging-station technicians
+* E-mobility entrepreneurs
+* Driver/rider training
+* Apprenticeships
+* Jobs
+* Business opportunities
+* Spare parts
+* Charging-station businesses
+
+This connects directly with YOUTH BIASHARA.
+
+⸻
+
+🏪 E-MOBILITY BUSINESS OPPORTUNITIES
+
+A person might not want to own an e-boda but may want to build an e-mobility business.
+
+Create opportunities for:
+
+Charging stations | Battery swapping | Vehicle dealerships | Repairs | Spare parts | Fleet management | Solar charging | Delivery | Financing | Software
+
+⸻
+
+🌱 E-MOBILITY + GREEN ECONOMY
+
+Create a section explaining:
+
+Why electric mobility matters to Kenya’s entrepreneurs
+
+* Lower operating costs where applicable
+* New businesses
+* New employment
+* Cleaner transport
+* Technology adoption
+* Energy innovation
+* Youth opportunities
+* Potential climate/green-finance opportunities
+
+⸻
+
+⭐ THE TAB SHOULD BE CALLED
+
+I would recommend:
+
+⚡ E-MOBILITY
+
+MOVE • OWN • EARN • GROW
+
+And the main call-to-action:
+
+“Find the right electric vehicle, financing and business opportunity for you.”

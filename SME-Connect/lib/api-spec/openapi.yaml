@@ -1,0 +1,1124 @@
+openapi: 3.1.0
+info:
+  title: Api
+  version: 0.1.0
+  description: Biashara Ndogo Association of Kenya API
+servers:
+  - url: /api
+    description: Base API path
+tags:
+  - name: health
+    description: Health operations
+  - name: members
+    description: Member registration and management
+  - name: coordinators
+    description: Coordinator registration and management
+  - name: sectors
+    description: SME sectors and profiles
+  - name: events
+    description: Events management
+  - name: stats
+    description: Organization statistics
+  - name: bnak-ai
+    description: Kenyan business guidance assistant
+  - name: verification
+    description: Anti-bot verification
+  - name: marketplace
+    description: Separate paid BNAK Marketplace seller system
+  - name: emobility
+    description: E-Mobility programme registrations
+  - name: donations
+    description: BNAK donation checkout
+  - name: partners
+    description: Partnership applications and institutional engagement
+
+paths:
+  /healthz:
+    get:
+      operationId: healthCheck
+      tags: [health]
+      summary: Health check
+      description: Returns server health status
+      responses:
+        "200":
+          description: Healthy
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/HealthStatus"
+
+  /bnak-ai/ask:
+    post:
+      operationId: askBnakAi
+      tags: [bnak-ai]
+      summary: Ask the BNAK business assistant
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BnakAiQuestion"
+      responses:
+        "200":
+          description: Business guidance response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BnakAiAnswer"
+
+  /verification/challenge:
+    get:
+      operationId: getVerificationChallenge
+      tags: [verification]
+      summary: Get a short-lived real-user challenge
+      responses:
+        "200":
+          description: Verification challenge
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/VerificationChallenge"
+
+  /stats:
+    get:
+      operationId: getStats
+      tags: [stats]
+      summary: Get organization statistics
+      description: Returns high-level stats for the organization
+      responses:
+        "200":
+          description: Statistics
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/OrgStats"
+
+  /members:
+    get:
+      operationId: listMembers
+      tags: [members]
+      summary: List members
+      parameters:
+        - name: category
+          in: query
+          schema:
+            type: string
+        - name: county
+          in: query
+          schema:
+            type: string
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 20
+        - name: offset
+          in: query
+          schema:
+            type: integer
+            default: 0
+      responses:
+        "200":
+          description: List of members
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Member"
+    post:
+      operationId: registerMember
+      tags: [members]
+      summary: Register a new member
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/MemberInput"
+      responses:
+        "201":
+          description: Member registered
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Member"
+        "400":
+          description: Validation error
+
+  /members/categories:
+    get:
+      operationId: getMemberCategories
+      tags: [members]
+      summary: Get membership categories
+      responses:
+        "200":
+          description: Membership categories
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/MemberCategory"
+
+  /coordinators:
+    get:
+      operationId: listCoordinators
+      tags: [coordinators]
+      summary: List coordinators
+      parameters:
+        - name: county
+          in: query
+          schema:
+            type: string
+        - name: constituency
+          in: query
+          schema:
+            type: string
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 20
+        - name: offset
+          in: query
+          schema:
+            type: integer
+            default: 0
+      responses:
+        "200":
+          description: List of coordinators
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Coordinator"
+    post:
+      operationId: registerCoordinator
+      tags: [coordinators]
+      summary: Register a new coordinator
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CoordinatorInput"
+      responses:
+        "201":
+          description: Coordinator registered
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Coordinator"
+        "400":
+          description: Validation error
+
+  /coordinators/benefits:
+    get:
+      operationId: getCoordinatorBenefits
+      tags: [coordinators]
+      summary: Get coordinator benefits
+      responses:
+        "200":
+          description: Coordinator benefits list
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Benefit"
+
+  /sectors:
+    get:
+      operationId: listSectors
+      tags: [sectors]
+      summary: List SME sectors
+      responses:
+        "200":
+          description: List of sectors
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Sector"
+
+  /sectors/{id}:
+    get:
+      operationId: getSector
+      tags: [sectors]
+      summary: Get sector profile
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Sector profile
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Sector"
+        "404":
+          description: Not found
+
+  /events:
+    get:
+      operationId: listEvents
+      tags: [events]
+      summary: List events
+      parameters:
+        - name: upcoming
+          in: query
+          schema:
+            type: boolean
+        - name: limit
+          in: query
+          schema:
+            type: integer
+            default: 10
+      responses:
+        "200":
+          description: List of events
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Event"
+    post:
+      operationId: createEvent
+      tags: [events]
+      summary: Create event
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/EventInput"
+      responses:
+        "201":
+          description: Event created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Event"
+
+  /events/{id}/register:
+    post:
+      operationId: registerForEvent
+      tags: [events]
+      summary: Register for an event
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/EventRegistrantInput"
+      responses:
+        "201":
+          description: Registered
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/EventRegistrant"
+
+  /marketplace/packages:
+    get:
+      operationId: listMarketplacePackages
+      tags: [marketplace]
+      summary: List monthly Marketplace seller packages
+      responses:
+        "200":
+          description: Marketplace packages
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/MarketplacePackage"
+
+  /marketplace/seller-applications:
+    post:
+      operationId: createMarketplaceSellerApplication
+      tags: [marketplace]
+      summary: Apply for member-only Marketplace seller access
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/MarketplaceSellerApplicationInput"
+      responses:
+        "202":
+          description: Seller application received and awaiting verification
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MarketplaceSellerApplication"
+        "400":
+          description: Invalid application or anti-bot verification
+        "403":
+          description: Matching eligible BNAK membership not found
+
+  /emobility/registrations:
+    post:
+      operationId: createEmobilityRegistration
+      tags: [emobility]
+      summary: Register for the BNAK E-Mobility programme
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/EmobilityRegistrationInput"
+      responses:
+        "202":
+          description: Registration received and awaiting payment verification
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/EmobilityRegistration"
+        "400":
+          description: Invalid registration or anti-bot verification
+
+  /donations/checkout:
+    post:
+      operationId: createDonationCheckout
+      tags: [donations]
+      summary: Create a hosted Stripe checkout session for a donation
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/DonationCheckoutInput"
+      responses:
+        "201":
+          description: Hosted Stripe checkout session created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DonationCheckout"
+        "400":
+          description: Invalid donation amount or email
+        "502":
+          description: Payment provider unavailable
+
+  /partners/applications:
+    post:
+      operationId: createPartnerApplication
+      tags: [partners]
+      summary: Submit a partnership application for BNAK review
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PartnerApplicationInput"
+      responses:
+        "202":
+          description: Application received and pending review
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PartnerApplication"
+        "400":
+          description: Invalid application or anti-bot verification
+
+components:
+  schemas:
+    HealthStatus:
+      type: object
+      properties:
+        status:
+          type: string
+      required: [status]
+
+    OrgStats:
+      type: object
+      properties:
+        totalMembers:
+          type: integer
+        totalCoordinators:
+          type: integer
+        totalSectors:
+          type: integer
+        countiesCovered:
+          type: integer
+        constituenciesCovered:
+          type: integer
+        wardsCovered:
+          type: integer
+        upcomingEvents:
+          type: integer
+      required:
+        - totalMembers
+        - totalCoordinators
+        - totalSectors
+        - countiesCovered
+        - constituenciesCovered
+        - wardsCovered
+        - upcomingEvents
+
+    Member:
+      type: object
+      properties:
+        id:
+          type: integer
+        fullName:
+          type: string
+        email:
+          type: string
+        phone:
+          type: string
+        businessName:
+          type: string
+        businessType:
+          type: string
+        category:
+          type: string
+        county:
+          type: string
+        constituency:
+          type: string
+        ward:
+          type: string
+        ageBracket:
+          type: string
+        gender:
+          type: string
+        nationalId:
+          type: string
+        estate:
+          type: string
+        businessLocation:
+          type: string
+        businessRegistrationNumber:
+          type: string
+        kraPin:
+          type: string
+        monthlyTransactionBracket:
+          type: string
+        mpesaNumber:
+          type: string
+        membershipNumber:
+          type: string
+        status:
+          type: string
+          enum: [active, pending, suspended]
+        createdAt:
+          type: string
+          format: date-time
+      required:
+        - id
+        - fullName
+        - email
+        - phone
+        - businessName
+        - businessType
+        - category
+        - county
+        - constituency
+        - ward
+        - membershipNumber
+        - status
+        - createdAt
+
+    MemberInput:
+      type: object
+      properties:
+        fullName:
+          type: string
+          minLength: 2
+        email:
+          type: string
+          format: email
+        phone:
+          type: string
+        businessName:
+          type: string
+          minLength: 2
+        businessType:
+          type: string
+        category:
+          type: string
+        county:
+          type: string
+        constituency:
+          type: string
+        ward:
+          type: string
+        ageBracket:
+          type: string
+        gender:
+          type: string
+        nationalId:
+          type: string
+        estate:
+          type: string
+        businessLocation:
+          type: string
+        businessRegistrationNumber:
+          type: string
+        kraPin:
+          type: string
+        monthlyTransactionBracket:
+          type: string
+        mpesaNumber:
+          type: string
+        verificationToken:
+          type: string
+        verificationAnswer:
+          type: string
+        formStartedAt:
+          type: integer
+        website:
+          type: string
+      required:
+        - fullName
+        - email
+        - phone
+        - businessName
+        - businessType
+        - category
+        - county
+        - constituency
+        - ward
+        - verificationToken
+        - verificationAnswer
+        - formStartedAt
+
+    BnakAiQuestion:
+      type: object
+      properties:
+        question:
+          type: string
+          minLength: 3
+          maxLength: 1200
+        language:
+          type: string
+          enum: [English, Kiswahili]
+      required: [question, language]
+
+    BnakAiAnswer:
+      type: object
+      properties:
+        answer:
+          type: string
+        guidanceType:
+          type: string
+          enum: [general-guidance, verified-information, confirm-with-institution]
+        confirmationNote:
+          type: string
+        suggestedActions:
+          type: array
+          items:
+            type: string
+      required: [answer, guidanceType, confirmationNote, suggestedActions]
+
+    VerificationChallenge:
+      type: object
+      properties:
+        token:
+          type: string
+        question:
+          type: string
+        expiresAt:
+          type: string
+          format: date-time
+      required: [token, question, expiresAt]
+
+    MarketplacePackage:
+      type: object
+      properties:
+        name:
+          type: string
+          enum: [Starter, Growth, Pro, B2B, Enterprise]
+        monthlyFee:
+          type: integer
+        description:
+          type: string
+      required: [name, monthlyFee, description]
+
+    MarketplaceSellerApplicationInput:
+      type: object
+      properties:
+        membershipNumber:
+          type: string
+        email:
+          type: string
+          format: email
+        phone:
+          type: string
+        packageName:
+          type: string
+          enum: [Starter, Growth, Pro, B2B, Enterprise]
+        mpesaNumber:
+          type: string
+        businessSummary:
+          type: string
+          minLength: 20
+          maxLength: 1000
+        verificationToken:
+          type: string
+        verificationAnswer:
+          type: string
+        formStartedAt:
+          type: integer
+        website:
+          type: string
+      required: [membershipNumber, email, phone, packageName, mpesaNumber, businessSummary, verificationToken, verificationAnswer, formStartedAt]
+
+    MarketplaceSellerApplication:
+      type: object
+      properties:
+        id:
+          type: integer
+        membershipNumber:
+          type: string
+        packageName:
+          type: string
+        monthlyFee:
+          type: integer
+        status:
+          type: string
+        paymentStatus:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+      required: [id, membershipNumber, packageName, monthlyFee, status, paymentStatus, createdAt]
+
+    EmobilityRegistrationInput:
+      type: object
+      properties:
+        fullName:
+          type: string
+        email:
+          type: string
+          format: email
+        phone:
+          type: string
+        businessName:
+          type: string
+        operatorType:
+          type: string
+        county:
+          type: string
+        mpesaNumber:
+          type: string
+        verificationToken:
+          type: string
+        verificationAnswer:
+          type: string
+        formStartedAt:
+          type: integer
+        website:
+          type: string
+      required: [fullName, email, phone, businessName, operatorType, county, mpesaNumber, verificationToken, verificationAnswer, formStartedAt]
+
+    EmobilityRegistration:
+      type: object
+      properties:
+        id:
+          type: integer
+        fullName:
+          type: string
+        businessName:
+          type: string
+        operatorType:
+          type: string
+        county:
+          type: string
+        fee:
+          type: integer
+        status:
+          type: string
+        paymentStatus:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+      required: [id, fullName, businessName, operatorType, county, fee, status, paymentStatus, createdAt]
+
+    DonationCheckoutInput:
+      type: object
+      properties:
+        amount:
+          type: integer
+          minimum: 100
+          maximum: 1000000
+          description: Donation amount in whole Kenyan shillings
+        donorEmail:
+          type: string
+          format: email
+      required: [amount]
+
+    DonationCheckout:
+      type: object
+      properties:
+        checkoutUrl:
+          type: string
+          format: uri
+        sessionId:
+          type: string
+      required: [checkoutUrl, sessionId]
+
+    MemberCategory:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        description:
+          type: string
+        annualFee:
+          type: number
+        benefits:
+          type: array
+          items:
+            type: string
+      required: [id, name, description, annualFee, benefits]
+
+    PartnerApplication:
+      type: object
+      properties:
+        id:
+          type: integer
+        organisationName:
+          type: string
+        contactName:
+          type: string
+        email:
+          type: string
+          format: email
+        phone:
+          type: string
+        website:
+          type: ["string", "null"]
+        partnershipType:
+          type: string
+          enum: [Strategic Partner, Programme Partner, Implementing Partner, Funding Partner, Sponsor, Technical Partner, Knowledge Partner, Market Partner]
+        organisationSummary:
+          type: string
+        proposedContribution:
+          type: string
+        countyOrCoverage:
+          type: string
+        status:
+          type: string
+          enum: [pending_review, approved, rejected]
+        createdAt:
+          type: string
+          format: date-time
+      required: [id, organisationName, contactName, email, phone, partnershipType, organisationSummary, proposedContribution, countyOrCoverage, status, createdAt]
+
+    PartnerApplicationInput:
+      type: object
+      properties:
+        organisationName:
+          type: string
+          minLength: 2
+        contactName:
+          type: string
+          minLength: 2
+        email:
+          type: string
+          format: email
+        phone:
+          type: string
+          minLength: 9
+        website:
+          type: string
+          format: uri
+        partnershipType:
+          type: string
+          enum: [Strategic Partner, Programme Partner, Implementing Partner, Funding Partner, Sponsor, Technical Partner, Knowledge Partner, Market Partner]
+        organisationSummary:
+          type: string
+          minLength: 20
+          maxLength: 1500
+        proposedContribution:
+          type: string
+          minLength: 20
+          maxLength: 1500
+        countyOrCoverage:
+          type: string
+          minLength: 2
+        verificationToken:
+          type: string
+        verificationAnswer:
+          type: string
+        formStartedAt:
+          type: integer
+        honeypot:
+          type: string
+      required: [organisationName, contactName, email, phone, partnershipType, organisationSummary, proposedContribution, countyOrCoverage, verificationToken, verificationAnswer, formStartedAt]
+
+    Coordinator:
+      type: object
+      properties:
+        id:
+          type: integer
+        fullName:
+          type: string
+        email:
+          type: string
+        phone:
+          type: string
+        nationalId:
+          type: string
+        county:
+          type: string
+        constituency:
+          type: string
+        ward:
+          type: string
+        level:
+          type: string
+          enum: [county, constituency, ward]
+        registrationFee:
+          type: number
+        status:
+          type: string
+          enum: [active, pending, suspended]
+        coordinatorCode:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+      required:
+        - id
+        - fullName
+        - email
+        - phone
+        - nationalId
+        - county
+        - constituency
+        - ward
+        - level
+        - registrationFee
+        - status
+        - coordinatorCode
+        - createdAt
+
+    CoordinatorInput:
+      type: object
+      properties:
+        fullName:
+          type: string
+          minLength: 2
+        email:
+          type: string
+          format: email
+        phone:
+          type: string
+        nationalId:
+          type: string
+        county:
+          type: string
+        constituency:
+          type: string
+        ward:
+          type: string
+        level:
+          type: string
+          enum: [county, constituency, ward]
+        mpesaNumber:
+          type: string
+        motivation:
+          type: string
+      required:
+        - fullName
+        - email
+        - phone
+        - nationalId
+        - county
+        - constituency
+        - ward
+        - level
+        - mpesaNumber
+
+    Benefit:
+      type: object
+      properties:
+        id:
+          type: integer
+        title:
+          type: string
+        description:
+          type: string
+        icon:
+          type: string
+      required: [id, title, description, icon]
+
+    Sector:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        description:
+          type: string
+        imageUrl:
+          type: string
+        totalSMEs:
+          type: integer
+        annualContribution:
+          type: string
+        keyProducts:
+          type: array
+          items:
+            type: string
+        challenges:
+          type: array
+          items:
+            type: string
+        opportunities:
+          type: array
+          items:
+            type: string
+        counties:
+          type: array
+          items:
+            type: string
+      required:
+        - id
+        - name
+        - description
+        - imageUrl
+        - totalSMEs
+        - annualContribution
+        - keyProducts
+        - challenges
+        - opportunities
+        - counties
+
+    Event:
+      type: object
+      properties:
+        id:
+          type: integer
+        title:
+          type: string
+        description:
+          type: string
+        eventDate:
+          type: string
+          format: date-time
+        endDate:
+          type: ["string", "null"]
+          format: date-time
+        venue:
+          type: string
+        county:
+          type: string
+        eventType:
+          type: string
+          enum: [workshop, conference, training, networking, exhibition, other]
+        imageUrl:
+          type: ["string", "null"]
+        registrationDeadline:
+          type: ["string", "null"]
+          format: date-time
+        maxAttendees:
+          type: ["integer", "null"]
+        currentAttendees:
+          type: integer
+        isFeatured:
+          type: boolean
+        createdAt:
+          type: string
+          format: date-time
+      required:
+        - id
+        - title
+        - description
+        - eventDate
+        - venue
+        - county
+        - eventType
+        - currentAttendees
+        - isFeatured
+        - createdAt
+
+    EventInput:
+      type: object
+      properties:
+        title:
+          type: string
+          minLength: 3
+        description:
+          type: string
+        eventDate:
+          type: string
+          format: date-time
+        endDate:
+          type: ["string", "null"]
+          format: date-time
+        venue:
+          type: string
+        county:
+          type: string
+        eventType:
+          type: string
+          enum: [workshop, conference, training, networking, exhibition, other]
+        imageUrl:
+          type: ["string", "null"]
+        registrationDeadline:
+          type: ["string", "null"]
+          format: date-time
+        maxAttendees:
+          type: ["integer", "null"]
+        isFeatured:
+          type: boolean
+      required:
+        - title
+        - description
+        - eventDate
+        - venue
+        - county
+        - eventType
+
+    EventRegistrant:
+      type: object
+      properties:
+        id:
+          type: integer
+        eventId:
+          type: integer
+        fullName:
+          type: string
+        email:
+          type: string
+        phone:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+      required: [id, eventId, fullName, email, phone, createdAt]
+
+    EventRegistrantInput:
+      type: object
+      properties:
+        fullName:
+          type: string
+          minLength: 2
+        email:
+          type: string
+          format: email
+        phone:
+          type: string
+      required: [fullName, email, phone]

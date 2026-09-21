@@ -1,0 +1,688 @@
+BIASHARA NDOGO ASSOCIATION OF KENYA (BNAK)
+
+REPLIT DEVELOPMENT BRIEF — DIGITAL PLATFORM
+
+Build a modern, scalable and professional digital platform for Biashara Ndogo Association of Kenya (BNAK).
+
+The platform must be designed as a national digital economic ecosystem for Biashara Ndogo, not simply as an association information website.
+
+The platform should be:
+
+KENYAN 🇰🇪
+AFRICAN 🌍
+INCLUSIVE 🤝
+MODERN 💻
+ENTREPRENEURIAL 🚀
+PROFESSIONAL
+
+CORE BRAND DIRECTION
+
+ROOTED IN KENYA. INSPIRED BY AFRICA. CONNECTED TO THE WORLD.
+
+The entire platform should have a strong Kenyan and African identity.
+
+Use authentic imagery and design elements representing Kenyan entrepreneurs, traders, farmers, markets, youth, women, artisans, boda boda entrepreneurs, small manufacturers and entrepreneurs with disabilities.
+
+Avoid making the website look like a generic NGO, government portal or international corporate template.
+
+It should feel like a powerful African business platform built in Kenya for entrepreneurs.
+
+⸻
+
+KENYAN FLAG DESIGN LANGUAGE
+
+Incorporate the colours of the Kenyan national flag throughout the UI:
+
+BLACK • RED • GREEN • WHITE
+
+Use these colours elegantly as:
+
+* Thin borders
+* Page boundaries
+* Section dividers
+* Card outlines
+* Navigation accents
+* Buttons
+* Progress indicators
+* Icons
+* Homepage design elements
+
+The Kenyan colours should create a subtle national visual frame/boundary around the platform.
+
+Do not overuse the colours.
+
+The result should be premium, modern and recognisably Kenyan, rather than looking like the flag has simply been placed on the website.
+
+⸻
+
+PLATFORM STRUCTURE
+
+1. BIASHARA FINANCE
+
+Create a dedicated financial-services section connecting entrepreneurs with legitimate financial providers.
+
+Include:
+
+* Banks
+* SACCOs
+* Microfinance
+* Fintechs
+* Government enterprise funds
+* Grants
+* Asset financing
+* Insurance
+* Savings and investment opportunities
+
+Finance Finder
+
+Allow users to search/filter financial opportunities based on:
+
+* Business type
+* Location
+* Financing amount
+* Purpose
+* Youth
+* Women
+* Persons with disabilities
+* Agriculture
+* Start-ups
+* Existing businesses
+
+Important
+
+BNAK must NOT present itself as a lender unless it becomes legally licensed to provide lending services.
+
+The platform should operate as a trusted information, discovery and connection platform linking entrepreneurs with legitimate providers.
+
+⸻
+
+2. OPPORTUNITIES HUB
+
+Create a central opportunity marketplace.
+
+Include:
+
+* Government tenders
+* Private-sector tenders
+* Jobs
+* Grants
+* Training
+* Exhibitions
+* Conferences
+* Government programmes
+* Corporate opportunities
+* Supplier opportunities
+* Procurement opportunities
+* International opportunities
+* Export opportunities
+* Partnerships
+
+Every opportunity should have:
+
+Title
+Description
+Eligibility
+Location
+Deadline
+Requirements
+Application method
+Official source/link
+
+Include filters for:
+
+County | Sector | Youth | Women | PWD | Agriculture | Start-up | SME | Manufacturing | Trade | Technology
+
+⸻
+
+3. BUSINESS KNOWLEDGE CENTRE
+
+Create a practical business education centre.
+
+Topics:
+
+* Business registration
+* KRA guidance
+* Tax education
+* County licences
+* Business permits
+* Bookkeeping
+* Financial literacy
+* Digital marketing
+* Business planning
+* Cash-flow management
+* Importing
+* Exporting
+* Procurement
+* Food safety
+* LPG safety
+* Consumer protection
+* Counterfeit awareness
+* Technology for business
+
+Content formats:
+
+Articles
+Short videos
+Audio
+Infographics
+FAQs
+Step-by-step guides
+Webinars
+
+Make information simple and practical.
+
+Support English and Kiswahili, with room for additional local-language support later.
+
+⸻
+
+4. ASK BNAK
+
+Make this one of the platform’s signature features.
+
+Create a system where an entrepreneur can submit a question or business problem.
+
+Examples:
+
+My county is asking for this levy.
+
+My goods are being held at the port.
+
+I need information about a business permit.
+
+Where can I report counterfeit products?
+
+I need financing for my business.
+
+I have a dispute with a supplier.
+
+Workflow
+
+SUBMIT QUESTION
+
+↓
+
+CATEGORISE
+
+↓
+
+ASSIGN TO BNAK TEAM / RELEVANT INSTITUTION
+
+↓
+
+REFERENCE NUMBER
+
+↓
+
+TRACK STATUS
+
+↓
+
+RESPONSE
+
+↓
+
+RESOLVED / ESCALATED
+
+Statuses:
+
+Submitted
+Received
+Under Review
+Referred
+Response
+Resolved
+Escalated
+
+The entrepreneur should be able to track their case from their dashboard.
+
+⸻
+
+5. REPORT A BUSINESS CHALLENGE
+
+Create a national reporting system for grassroots business challenges.
+
+Categories should include:
+
+* Harassment
+* Unfair levies
+* Market problems
+* Unfair taxation
+* Licensing problems
+* Regulatory challenges
+* Security concerns
+* Counterfeit goods
+* Infrastructure problems
+* Supply-chain problems
+* Access-to-finance problems
+* County government issues
+* National government regulatory issues
+
+Allow confidential/anonymous reporting where legally and technically appropriate.
+
+Use aggregated, anonymised data to help BNAK understand national business challenges and strengthen policy advocacy.
+
+⸻
+
+6. POLICY & ADVOCACY
+
+Create:
+
+VOICE OF BIASHARA NDOGO
+
+Show entrepreneurs that their membership creates a collective voice.
+
+Include:
+
+* BNAK policy positions
+* Government proposals
+* Memoranda
+* Public participation
+* Policy alerts
+* Research
+* Business surveys
+* Grassroots findings
+* Current advocacy campaigns
+* Progress reports
+
+POLICY TRACKER
+
+For major issues display:
+
+ISSUE
+
+↓
+
+WHAT ENTREPRENEURS ARE SAYING
+
+↓
+
+BNAK POSITION
+
+↓
+
+INSTITUTION BEING ENGAGED
+
+↓
+
+PROGRESS
+
+↓
+
+OUTCOME
+
+↓
+
+NEXT STEP
+
+⸻
+
+7. YOUTH BIASHARA
+
+Create a dedicated youth entrepreneurship section.
+
+Focus on:
+
+* Start-ups
+* Business ideas
+* Youth financing
+* Grants
+* Jobs
+* Training
+* Mentorship
+* Apprenticeships
+* Internships
+* Digital skills
+* Innovation
+* Business competitions
+* Incubators
+* Export opportunities
+
+Create a filter:
+
+OPPORTUNITIES FOR YOUTH
+
+The youth should be able to quickly find relevant opportunities.
+
+⸻
+
+8. WOMEN IN BIASHARA
+
+Create a dedicated section for women entrepreneurs.
+
+Include:
+
+* Women-owned businesses
+* Finance
+* Grants
+* Market access
+* Training
+* Mentorship
+* Digital skills
+* Agriculture
+* Manufacturing
+* Retail
+* Services
+* Export opportunities
+* Leadership opportunities
+
+Create:
+
+WOMEN BUSINESS DIRECTORY
+
+and
+
+WOMEN FINANCE FINDER
+
+⸻
+
+9. BIASHARA INCLUSIVE — PERSONS WITH DISABILITIES
+
+Create a dedicated inclusive entrepreneurship section.
+
+Accessibility must be built into the entire platform, not added later.
+
+Support:
+
+* Screen readers
+* Keyboard navigation
+* Adjustable text size
+* High contrast
+* Alternative image text
+* Captions
+* Audio information
+* Accessible forms
+* Simple navigation
+* Kenyan Sign Language support where practical
+* Accessible documents
+
+Include opportunities specifically relevant to entrepreneurs with disabilities:
+
+* Finance
+* Grants
+* Training
+* Jobs
+* Procurement
+* Business programmes
+* Assistive technology
+* Market opportunities
+
+Disability status should be voluntary to disclose.
+
+⸻
+
+10. INCLUSIVE OPPORTUNITY FILTER
+
+Across the platform, allow users to filter opportunities by:
+
+All Entrepreneurs
+Youth
+Women
+Persons with Disabilities
+Farmers
+Traders
+Artisans
+Manufacturers
+Start-ups
+Micro Businesses
+Small Businesses
+
+⸻
+
+11. INCLUSIVE FINANCE FILTER
+
+Allow entrepreneurs to identify themselves voluntarily as:
+
+* Youth entrepreneur
+* Woman entrepreneur
+* Person with disability
+* Farmer
+* Trader
+* Manufacturer
+* Start-up
+* Established business
+
+Then show potentially relevant financial opportunities.
+
+⸻
+
+12. BIASHARA DIRECTORY
+
+Build a national business directory.
+
+Search by:
+
+County → Town → Market → Sector → Business
+
+Business profiles should include:
+
+* Business name
+* Logo/photo
+* Owner/business description
+* Location
+* Products/services
+* Contact information
+* Operating hours
+* Social links
+* BNAK membership status
+* Verification status
+
+Optional tags:
+
+Youth-Owned
+Women-Owned
+Disability-Owned
+Agribusiness
+Manufacturer
+Trader
+Service Provider
+Family Business
+
+⸻
+
+13. MEMBER DASHBOARD
+
+Every registered member should have a personal dashboard.
+
+Show:
+
+Membership status
+Business profile
+Opportunities
+Finance opportunities
+Training
+Events
+Ask BNAK cases
+Reports submitted
+Policy alerts
+Notifications
+
+⸻
+
+14. BNAK PROGRAMMES
+
+Create dedicated pages for BNAK’s programmes:
+
+* BIASHARA BORA
+* JENGA KWAKO
+* BODA BIASHARA
+* KILIMO PESA
+* GAS SAFI
+* SOKO KWA SOKO
+* NGANI HALALI
+* HAKI KARIBU NA BIZ
+* BIASHARA NI AMANI
+* DIGITAL BIASHARA
+
+Each programme should have:
+
+Overview
+Objectives
+Who it serves
+How to participate
+Current activities
+Opportunities
+Partners
+Impact
+News
+Contact
+
+⸻
+
+15. AFRICAN EXPANSION READY
+
+The architecture should be designed so that BNAK can eventually expand beyond Kenya.
+
+Do not hard-code the platform exclusively for one country.
+
+The initial market is:
+
+KENYA 🇰🇪
+
+Future architecture should support:
+
+AFRICA 🌍
+
+Potential future capabilities:
+
+* Country selection
+* African business directory
+* Cross-border trade
+* Export/import opportunities
+* African supplier network
+* Regional partnerships
+* African entrepreneur communities
+
+⸻
+
+16. DATA & INTELLIGENCE
+
+Build the platform so that BNAK can generate useful aggregated economic intelligence.
+
+Potential dashboards:
+
+* Businesses by county
+* Businesses by sector
+* Youth participation
+* Women participation
+* PWD participation
+* Main business challenges
+* Financing needs
+* Market needs
+* Opportunity demand
+* Policy issues
+
+Personal information must be handled securely and only used according to applicable privacy and data-protection requirements.
+
+The goal is to help BNAK understand:
+
+WHAT IS HAPPENING TO BIASHARA NDOGO ACROSS KENYA?
+
+This information can support research, partnerships and evidence-based advocacy.
+
+⸻
+
+17. DESIGN PERSONALITY
+
+The platform should feel:
+
+Proud
+African
+Kenyan
+Warm
+Energetic
+Trustworthy
+Professional
+Modern
+Inclusive
+Entrepreneurial
+Ambitious
+
+Avoid:
+
+* Generic stock imagery
+* Overly corporate Western styling
+* Government-portal appearance
+* Excessive animations
+* Clutter
+* Too many colours
+* Complicated navigation
+
+⸻
+
+18. MOBILE-FIRST
+
+The platform must be designed primarily for mobile users.
+
+It should work extremely well on:
+
+Android phones
+iPhones
+Tablets
+Desktop computers
+
+Keep pages lightweight and fast because many entrepreneurs will access the platform through mobile networks.
+
+⸻
+
+19. FUTURE INTEGRATION
+
+Design the architecture so it can later support:
+
+* Mobile application
+* WhatsApp integration
+* SMS
+* USSD
+* Digital membership cards
+* Online payments
+* Notifications
+* AI-powered business assistance
+* Partner APIs
+* Government/public information feeds
+* Financial-provider integrations
+* Marketplace payments
+
+Do not build unnecessary complexity in the first version, but make the architecture scalable from the beginning.
+
+⸻
+
+20. THE CORE USER EXPERIENCE
+
+The platform should answer five questions immediately:
+
+1. HOW DO I GROW?
+
+Business Knowledge + Finance
+
+2. WHERE CAN I FIND OPPORTUNITIES?
+
+Opportunities Hub + Marketplace
+
+3. WHERE CAN I GET HELP?
+
+Ask BNAK
+
+4. HOW DO I REPORT A PROBLEM?
+
+Report a Business Challenge
+
+5. HOW CAN MY VOICE BE HEARD?
+
+Voice of Biashara Ndogo
+
+⸻
+
+FINAL BRAND STATEMENT
+
+The entire platform should communicate:
+
+🇰🇪 ROOTED IN KENYA
+
+🌍 INSPIRED BY AFRICA
+
+🤝 OPEN TO EVERY ENTREPRENEUR
+
+🚀 CONNECTED TO THE WORLD
+
+BIASHARA NDOGO ASSOCIATION OF KENYA
+
+Your Business. Your Opportunities. Your Voice. Your Future.

@@ -1,0 +1,296 @@
+⚡ ADDITIONAL E-MOBILITY FEATURES
+
+Expand the BNAK E-Mobility section into a complete transport and e-mobility business ecosystem, not just a vehicle application page.
+
+1. “WHICH EV IS RIGHT FOR ME?”
+
+Create an interactive questionnaire that considers:
+
+* Budget
+* Daily travel distance
+* Passenger or cargo use
+* Location
+* Charging access
+* Current vehicle
+* Expected daily income
+* Business/transport needs
+
+The system should recommend suitable options such as:
+
+* E-Boda
+* E-TukTuk
+* E-Bus / E-Matatu
+* Electric commercial vehicle
+
+⸻
+
+2. E-MOBILITY CALCULATOR
+
+Create tools that allow users to compare:
+
+* Fuel versus electricity costs
+* Daily operating costs
+* Monthly operating costs
+* Estimated savings
+* Financing repayment
+* Maintenance costs
+* Break-even period
+* Estimated total cost of ownership
+
+The platform should clearly label calculations as estimates where applicable.
+
+⸻
+
+3. E-MOBILITY FINANCE MARKETPLACE
+
+Allow participating finance providers to list their e-mobility financing products.
+
+Users should be able to compare:
+
+* Deposit
+* Repayment period
+* Eligibility
+* Required documents
+* Insurance requirements
+* Battery terms
+* Warranty
+* Financing structure
+* Application process
+* Official application link
+
+BNAK should act as a trusted information and connection platform unless it is legally licensed to provide financing itself.
+
+⸻
+
+4. BATTERY CENTRE 🔋
+
+Create a dedicated battery information section covering:
+
+* Battery ownership
+* Battery subscription
+* Battery leasing
+* Battery swapping
+* Battery charging
+* Battery warranty
+* Battery replacement
+* Battery health
+* Approved battery/service providers
+* Battery safety and maintenance education
+
+⸻
+
+5. CHARGING & BATTERY-SWAP NETWORK 🗺️
+
+Create:
+
+“FIND CHARGING NEAR ME”
+
+The future map should show:
+
+* EV charging stations
+* Battery-swapping stations
+* Locations
+* Operating hours
+* Vehicle compatibility
+* Available services
+* Official pricing where available
+
+Design the architecture so additional charging networks can be added later.
+
+⸻
+
+6. E-MOBILITY MARKETPLACE
+
+Create a verified marketplace where approved providers can list:
+
+* E-Bodas
+* E-TukTuks
+* E-Buses
+* Electric commercial vehicles
+* Chargers
+* Batteries
+* Spare parts
+* Accessories
+* Maintenance services
+
+All listings should clearly identify the provider and verification status.
+
+⸻
+
+7. E-MOBILITY FLEET MANAGER
+
+For entrepreneurs operating multiple electric vehicles, create:
+
+“MY E-MOBILITY FLEET”
+
+Allow fleet owners to manage:
+
+* Vehicles
+* Drivers/riders
+* Revenue
+* Energy costs
+* Maintenance
+* Financing
+* Insurance
+* Battery status
+* Vehicle utilisation
+* Service schedules
+
+⸻
+
+8. E-MOBILITY JOBS & SKILLS
+
+Create a dedicated employment and skills section for:
+
+* EV mechanics
+* Battery technicians
+* Charging technicians
+* Drivers
+* E-Boda riders
+* E-TukTuk operators
+* Sales agents
+* Fleet managers
+* Software and technology jobs
+* Apprenticeships
+* Training programmes
+
+Connect this strongly with YOUTH BIASHARA.
+
+⸻
+
+9. E-MOBILITY BUSINESS OPPORTUNITIES
+
+Show opportunities beyond vehicle ownership.
+
+Include:
+
+* Charging stations
+* Battery-swapping businesses
+* EV repairs
+* Spare-parts businesses
+* Vehicle dealerships
+* Fleet management
+* Delivery businesses
+* Solar charging
+* Battery services
+* E-mobility technology
+* Financing partnerships
+
+The platform should help entrepreneurs see the entire e-mobility value chain.
+
+⸻
+
+10. E-MOBILITY GOVERNMENT & POLICY CENTRE
+
+Create a trusted information centre for:
+
+* E-mobility regulations
+* Government programmes
+* Incentives
+* Standards
+* Licensing requirements
+* Public consultations
+* Policy developments
+* Official announcements
+
+Every important piece of information should display:
+
+SOURCE + DATE UPDATED
+
+Avoid presenting unverified information as official government policy.
+
+⸻
+
+11. E-MOBILITY APPLICATION TRACKER
+
+When a user applies for an EV or financing programme, provide a tracking system:
+
+APPLICATION SUBMITTED
+↓
+VERIFICATION
+↓
+FINANCING REVIEW
+↓
+APPROVED / NOT APPROVED
+↓
+VEHICLE ALLOCATION
+↓
+DELIVERY
+
+Users should receive:
+
+* Application/reference number
+* Status updates
+* Notifications
+* Required next steps
+* Provider contact information
+
+Where applications are handled by external providers, clearly distinguish the provider’s process from BNAK’s role.
+
+⸻
+
+12. E-MOBILITY COMMUNITY
+
+Create a moderated community for:
+
+* E-Boda riders
+* E-TukTuk operators
+* E-Bus operators
+* Fleet owners
+* Mechanics
+* Charging operators
+* Entrepreneurs
+* E-mobility service providers
+
+Allow knowledge sharing, questions, experiences and business networking while maintaining strong moderation against scams, misinformation and abuse.
+
+⸻
+
+⭐ 13. “START AN E-MOBILITY BUSINESS” WIZARD
+
+Make this one of the signature features.
+
+A user selects:
+
+My capital → My county → My business idea → My transport needs
+
+The platform then provides a personalised pathway showing:
+
+* Recommended business models
+* Suitable vehicle/equipment
+* Estimated setup requirements
+* Indicative costs
+* Financing opportunities
+* Training requirements
+* Relevant licences/requirements
+* Charging requirements
+* Maintenance requirements
+* Potential revenue models
+* Relevant BNAK programmes
+* Available opportunities
+
+The system should clearly distinguish estimates, third-party information and official requirements.
+
+⸻
+
+🇰🇪 BNAK E-MOBILITY HUB
+
+Position the entire section as:
+
+OWN • FINANCE • CHARGE • EARN • SERVICE • GROW
+
+The E-Mobility Hub should integrate directly with:
+
+BODA BIASHARA
+↓
+E-MOBILITY
+↓
+BIASHARA FINANCE
+↓
+YOUTH BIASHARA
+↓
+JOBS & SKILLS
+↓
+BUSINESS OPPORTUNITIES
+
+The objective is to make BNAK a platform where an entrepreneur can enter, finance, operate, maintain and grow within Kenya’s emerging electric-mobility economy.
