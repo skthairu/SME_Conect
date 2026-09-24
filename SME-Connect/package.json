@@ -3,13 +3,13 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "build": "pnpm run typecheck && pnpm run hostinger:build",
-    "hostinger:build": "node scripts/hostinger-build.mjs",
-    "start": "node artifacts/api-server/dist/index.mjs",
-    "typecheck:libs": "tsc --build",
-    "typecheck": "pnpm run typecheck:libs && pnpm -r --filter \"./artifacts/**\" --filter \"./scripts\" --if-present run typecheck",
-    "db:push": "pnpm --filter @workspace/db push"
-  },
+  "build": "npm install -g pnpm@9.15.0 --prefix $HOME/.local && export PATH=$HOME/.local/bin:$PATH && pnpm install --frozen-lockfile && pnpm run typecheck && pnpm run hostinger:build",
+  "hostinger:build": "node scripts/hostinger-build.mjs",
+  "start": "node artifacts/api-server/dist/index.mjs",
+  "typecheck:libs": "tsc --build",
+  "typecheck": "pnpm run typecheck:libs && pnpm -r --filter \"./artifacts/**\" --filter \"./scripts\" --if-present run typecheck",
+  "db:push": "pnpm --filter @workspace/db push"
+},
   "private": true,
   "devDependencies": {
     "prettier": "^3.8.3",
