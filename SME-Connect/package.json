@@ -2,24 +2,24 @@
   "name": "sme-connect",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {
-  "build": "npm install -g pnpm@9.15.0 --prefix $HOME/.local && export PATH=$HOME/.local/bin:$PATH && pnpm install --frozen-lockfile && pnpm run typecheck && pnpm run hostinger:build",
-  "hostinger:build": "node scripts/hostinger-build.mjs",
-  "start": "node artifacts/api-server/dist/index.mjs",
-  "typecheck:libs": "tsc --build",
-  "typecheck": "pnpm run typecheck:libs && pnpm -r --filter \"./artifacts/**\" --filter \"./scripts\" --if-present run typecheck",
-  "db:push": "pnpm --filter @workspace/db push"
-},
   "private": true,
+  "packageManager": "pnpm@9.15.0",
+  "engines": {
+    "node": ">=20.0.0 <23"
+  },
+  "scripts": {
+    "build": "npm install -g pnpm@9.15.0 --prefix $HOME/.local && export PATH=$HOME/.local/bin:$PATH && pnpm install && pnpm run typecheck && pnpm run hostinger:build",
+    "hostinger:build": "node scripts/hostinger-build.mjs",
+    "start": "node artifacts/api-server/dist/index.mjs",
+    "typecheck:libs": "tsc --build",
+    "typecheck": "pnpm run typecheck:libs && pnpm -r --filter \"./artifacts/**\" --filter \"./scripts\" --if-present run typecheck",
+    "db:push": "pnpm --filter @workspace/db push"
+  },
   "devDependencies": {
     "prettier": "^3.8.3",
     "typescript": "~5.9.3"
   },
   "dependencies": {
     "stripe": "^22.6.2"
-  },
-  "packageManager": "pnpm@9.15.0",
-  "engines": {
-    "node": ">=20.0.0 <23"
   }
 }
