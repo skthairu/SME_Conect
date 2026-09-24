@@ -18,7 +18,7 @@
   "dependencies": {
     "stripe": "^22.6.2"
   },
-  "packageManager": "pnpm@10.12.4",
+  "packageManager": "pnpm@9.15.0",
   "engines": {
     "node": ">=20.0.0 <23"
   }
