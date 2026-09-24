@@ -1,5 +1,6 @@
 import express, { type Express } from "express";
 import path from "node:path";
+import { existsSync } from "node:fs";
 import cors from "cors";
 import pinoHttp from "pino-http";
 import router from "./routes";
@@ -59,9 +60,20 @@ app.use("/api", router);
 
 // Serve the production React/Vite build from the same Node.js application.
 // This allows Hostinger to run the frontend and API as one application.
-const frontendDist = process.env.FRONTEND_DIST_PATH
-  ? path.resolve(process.env.FRONTEND_DIST_PATH)
-  : path.resolve(process.cwd(), "artifacts/kenya-smes/dist/public");
+//
+// Path resolution order:
+// 1. FRONTEND_DIST_PATH env var (if set)
+// 2. ./public  → used on Hostinger (process runs from artifacts/api-server/dist)
+// 3. artifacts/kenya-smes/dist/public → used in local monorepo development
+const candidates = [
+  process.env.FRONTEND_DIST_PATH,
+  path.resolve(process.cwd(), "public"),
+  path.resolve(process.cwd(), "artifacts/kenya-smes/dist/public"),
+].filter(Boolean) as string[];
+
+const frontendDist =
+  candidates.find((p) => existsSync(p)) ??
+  path.resolve(process.cwd(), "public");
 
 app.use(express.static(frontendDist));
 
