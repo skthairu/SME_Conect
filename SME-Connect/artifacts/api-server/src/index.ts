@@ -4,7 +4,7 @@ import { logger } from "./lib/logger";
 function validateProductionConfiguration(): void {
   if (process.env.NODE_ENV === "production") {
     const required = ["DATABASE_URL", 
-                       "SESSION_SECRET"];
+                     "SESSION_SECRET"];
     const missing = required.filter((name) => !process.env[name]?.trim());
     if (missing.length) {
       throw new Error(`Missing required environment variables: ${missing.join(", ")}`);
